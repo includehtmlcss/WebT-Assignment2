@@ -1,0 +1,719 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+@import url(http://fonts.cdnfonts.com/css/jenna-sue);
+@import url(http://fonts.cdnfonts.com/css/merge-one);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Merge One', sans-serif;
+	user-select: none;
+}
+
+nav {
+	background: rgba(233, 184, 10, 0.7);
+	/* box-shadow: 0px 5px 15px rgba(0,0,0,0.2); */
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	backdrop-filter: blur(10px);
+}
+
+.nav-header {
+	flex: 1;
+	text-align: center;
+}
+
+.page-header {
+	flex: 4.5;
+	text-align: center;
+}
+
+.logo {
+	font-family: 'Montserrat';
+	font-weight: 900;
+	color: white;
+	font-size: 1.5rem;
+	transform: translate(-14px, 2px);
+}
+
+.img {
+	width: 8rem;
+}
+
+.page-name {
+	font-family: 'Jenna Sue', sans-serif;
+	color: white;
+	font-weight: lighter;
+	font-size: 2.7rem;
+	transform: translate(0px, 4px);
+}
+
+.main-body {
+	background: #f4f4f4;
+	position: relative;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin-top: -81px;
+}
+
+.side-bar {
+	flex: 1;
+	background-color: #141414;
+	/* height: fit-content; */
+	height: 1700px;
+	min-height: 100vh;
+	padding-top: 97px;
+	/* padding-left: 1rem; */
+	/* padding-right: 1rem; */
+	/* width: 100%; */
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	row-gap: 1rem;
+}
+
+.content {
+	flex: 4.5;
+	height: 100vh;
+	padding-top: 97px;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.links a {
+	display: block;
+	font-size: 1.14rem;
+	text-transform: capitalize;
+	padding: 1rem 1.5rem;
+	color: white;
+	flex: 2;
+}
+
+.url-wrapper {
+	position: relative;
+	display: flex;
+	padding-left: 0.5rem;
+	transition: all 0.3s linear;
+}
+
+.url-wrapper:hover {
+	background: rgba(233, 184, 10, 0.8);
+	backdrop-filter: blur(10px);
+}
+
+.links i {
+	color: white;
+}
+
+.right,
+.left {
+	width: 50%;
+}
+
+.right {
+	right: 0;
+	color: white;
+	padding: 1rem 0rem;
+	flex: 1;
+}
+
+.left {
+	left: 0;
+}
+
+.cards {
+	padding-top: 1.8rem;
+	/* padding-left: 1.1rem; */
+	display: grid;
+	width: fit-content;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 54.2px;
+	grid-row-gap: 35.2px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.cards-custom {
+	padding-top: 1rem;
+	padding-left: 0.5rem;
+	grid-column-gap: 32px;
+}
+
+.rating-cards {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.my-rating-card {
+	background-color: #FAFAFA;
+	border-radius: 20px;
+	padding: 0;
+	width: 100%;
+	height: fit-content;
+	overflow: hidden;
+	box-shadow: 7px 7px 35px rgba(24, 24, 24, 0.2);
+	transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	display: flex;
+}
+
+.my-rating-card .sno {
+	flex: 1;
+	display: grid;
+	place-content: center;
+	font-size: 2rem;
+	color: #585858;
+}
+
+.my-rating-card .product-img {
+	flex: 3;
+	height: 220px;
+}
+
+.my-rating-card .product-img img {
+	height: 220px;
+}
+
+.my-rating-card .product-details-container {
+	flex: 8;
+	display: flex;
+	flex-direction: column;
+	place-content: center;
+}
+
+.your-rating {
+	margin-top: 1rem;
+	font-size: 1.1rem;
+	display: flex;
+	align-items: center;
+}
+
+.your-rating i {
+	margin-right: 1rem;
+}
+
+.your-rating-btn {
+	outline: none;
+	padding: 0.5rem 1rem;
+	font-family: 'Merge One', sans-serif;
+	transition: all 0.2s linear;
+	border-radius: 5px;
+	border: 2px solid #ECCA50;
+	cursor: pointer;
+	color: #ECCA50;
+	font-size: 1.0rem;
+	background-color: transparent;
+}
+
+
+.your-rating-btn:hover {
+	color: rgb(255, 255, 255);
+	background-color: #ECCA50;
+}
+
+.my-rating-card:hover {
+	transform: scale(1.02);
+	box-shadow: 5px 5px 25px rgba(24, 24, 24, 0.3);
+}
+
+.card {
+	background-color: #FAFAFA;
+	border-radius: 20px;
+	padding: 1rem;
+	padding-top: 2.6rem;
+	padding-left: 2.2rem;
+	box-shadow: 7px 7px 35px rgba(24, 24, 24, 0.2);
+	width: 17.5rem;
+	height: 17.5rem;
+	position: relative;
+	transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	overflow: hidden;
+}
+
+.card:hover {
+	transform: scale(1.02);
+	box-shadow: 5px 5px 25px rgba(24, 24, 24, 0.3);
+}
+
+.product {
+	padding: 0;
+	text-align: left;
+	width: 19rem;
+	height: fit-content;
+}
+
+.card-word {
+	font-family: 'Jenna Sue', sans-serif;
+	font-size: 2.3rem;
+	color: #141414;
+}
+
+.number {
+	font-size: 4.6rem;
+	font-family: 'Montserrat';
+	font-weight: bold;
+	color: #ECCA50;
+	margin-top: -0.2rem;
+}
+
+.details-btn {
+	color: white;
+	outline: none;
+	border: none;
+	display: flex;
+	align-items: center;
+	background-color: #ECCA50;
+	padding: 0.55rem 1.8rem;
+	width: 55%;
+	font-size: 1.2rem;
+	border-radius: 20px 0px 20px 0px;
+	position: absolute;
+	font-family: 'Merge One', sans-serif;
+	bottom: 0;
+	right: 0;
+	cursor: pointer;
+	justify-content: center;
+}
+
+.details-btn i {
+	padding-left: 0.5rem;
+	transition: all 0.3s linear;
+}
+
+.details-btn:hover i {
+	transform: translate(6px, 0px);
+}
+
+.last-card {
+	padding: 1rem;
+	border: 1px dashed #ECCA50;
+	display: grid;
+	place-items: center;
+	cursor: pointer;
+}
+
+.plus {
+	transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.last-card:hover .plus {
+	transform: rotate(90deg) scale(1.5);
+}
+
+.add-products {
+	text-align: center;
+	font-size: 1.5rem;
+	color: #141414;
+}
+
+.add-products i {
+	color: #ECCA50;
+	font-size: 2rem;
+}
+
+.add-products p {
+	margin-top: 1rem;
+}
+
+.product-img {
+	height: 240px;
+	overflow: hidden;
+	display: flex;
+	place-content: center;
+}
+
+.product-img img {
+	height: 240px;
+	scale: 1.2;
+}
+
+.product-name {
+	margin: 0 0 0.6rem 0;
+	font-size: 2.6rem;
+	font-family: 'Jenna Sue', sans-serif;
+	color: #292929;
+}
+
+.price-rating {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 0 1rem 0;
+	color: #292929;
+}
+
+.product-price {
+	display: flex;
+	align-items: baseline;
+	font-size: 1.3rem;
+	font-family: 'Montserrat';
+	font-weight: 600;
+}
+
+.rating {
+	display: flex;
+}
+
+.star {
+	color: #ECCA50;
+	margin-left: 0.5rem;
+}
+
+.product-desc {
+	margin: 0;
+	font-size: 0.9rem;
+	color: #292929;
+}
+
+.product-btn {
+	display: flex;
+	align-items: center;
+}
+
+.cart-btn,
+.buy-btn {
+	flex: 1;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	font-family: 'Merge One', sans-serif;
+	font-size: 0.9rem;
+	color: white;
+	place-content: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.cart-btn {
+	/* border-bottom-left-radius: 20px; */
+	background-color: #ECCA50;
+	transition: all 0.2s linear;
+}
+
+.cart-btn:hover {
+	background-color: #dfb10a;
+}
+
+.buy-btn {
+	border-bottom-right-radius: 20px;
+	background-color: #faa83d;
+	transition: all 0.2s linear;
+}
+
+.buy-btn:hover {
+	background-color: #da7f08;
+}
+
+.product-btn i {
+	margin-right: 0.5rem;
+}
+
+.product-details-container {
+	background-color: #FAFAFA;
+	padding: 1rem 1.5rem;
+}
+
+.manage-qty {
+	align-items: center;
+	justify-content: space-evenly;
+	margin: 0 1.5rem 1rem 1.5rem;
+}
+
+.manage-qty p {
+	font-family: 'Montserrat';
+	font-weight: 700;
+	padding: 0.6rem 1.9rem;
+	color: #141414;
+	background-color: #ECCA50;
+	border-radius: 20px;
+	font-size: 1.2rem;
+}
+
+.manage-qty input {
+	font-family: 'Montserrat';
+	width: 100px;
+	font-weight: 700;
+	padding: 0.6rem 1.0rem;
+	color: #141414;
+	background-color: transparent;
+	border-radius: 20px;
+	font-size: 1rem;
+	text-align: center;
+	border: 2px solid #ECCA50;
+	outline: none;
+}
+
+.manage-qty i {
+	margin: 0;
+	cursor: pointer;
+	transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.manage-qty i:hover {
+	color: #ECCA50;
+	transform: scale(1.6);
+}
+
+.for-dealer {
+	padding-bottom: 0;
+}
+
+.add-product-btn-container {
+	position: fixed;
+	top: 1.25rem;
+	right: 3rem;
+	z-index: 99;
+}
+
+.add-product-btn {
+	font-family: 'Merge One';
+	border: 2px solid white;
+	color: white;
+	background-color: transparent;
+	padding: 0.5rem 1.3rem;
+	font-size: 1rem;
+	cursor: pointer;
+	border-radius: 20px;
+	transition: all 0.3s linear;
+}
+
+.add-product-btn:hover {
+	background-color: white;
+	color: #ECCA50;
+	box-shadow: 2px 3px 10px rgba(24, 24, 24, 0.1);
+}
+
+.rating-btns-container {
+	background-color: #FAFAFA;
+	padding: 0 1.5rem 1rem 1.5rem;
+	display: flex;
+	place-content: center;
+	justify-content: space-evenly;
+}
+
+.rating-btn {
+	background-color: transparent;
+	outline: none;
+	border: 2px solid #ECCA50;
+	border-radius: 50%;
+	color: #ECCA50;
+	font-family: 'Merge One', sans-serif;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	transition: all 0.3s linear;
+	font-size: 1rem;
+}
+
+.rating-btn:hover {
+	background-color: #ECCA50;
+	color: #FAFAFA;
+	transform: scale(1.2);
+}
+
+.logout-btn {
+	display: flex;
+	position: fixed;
+	z-index: 99;
+	top: 20px;
+	right: 30px;
+	outline: none;
+	border: 2px solid #fff;
+	border-radius: 20px;
+	color: #fff;
+	background-color: transparent;
+	font-family: 'Merge One', sans-serif;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+
+.logout-btn p {
+	margin-left: 0.4rem;
+}
+
+.logout-btn:hover {
+	background-color: #fff;
+	color: #ECCA50;
+}
+
+.image {
+	background-image: url(./bg.jpg);
+	background-position: center center;
+	background-repeat: no-repeat no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: -99;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(68, 53, 1, 0.7);
+	backdrop-filter: blur(3px);
+	z-index: -98;
+}
+
+.main {
+	display: grid;
+	place-content: center;
+	height: 100vh;
+}
+
+.welcome-signin {
+	display: flex;
+	align-items: center;
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	margin-right: 5rem;
+}
+
+p.line {
+	font-size: 1.7rem;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	color: #fff;
+}
+
+p.name {
+	font-family: 'Jenna Sue', sans-serif;
+	font-size: 7.5rem;
+}
+
+.name {
+	color: #ECCA50;
+}
+
+.form-container {
+	background-color: rgba(241, 235, 229, 0.3);
+	backdrop-filter: blur(8px);
+	width: 370px;
+	padding: 2.3rem 1.8rem;
+	border-radius: 15px;
+	box-shadow: 10px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+	font-size: 3.5rem;
+	text-align: center;
+	margin-bottom: 0.5rem;
+	color: #ECCA50;
+	font-family: 'Jenna Sue', sans-serif;
+	font-weight: lighter;
+}
+
+.field {
+	margin-bottom: 0.4rem;
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 0.9rem;
+}
+
+.input-area {
+	width: 100%;
+	outline: none;
+	margin-bottom: 1rem;
+	padding: 0.5rem 0.8rem;
+	border-radius: 5px;
+	border: 1px solid #ECCA50;
+	font-family: 'Roboto', sans-serif;
+	background-color: transparent;
+	color: white;
+}
+
+
+.btn-container {
+	display: flex;
+	margin-top: 0.8rem;
+	align-items: center;
+}
+
+.btn-container a {
+	text-decoration: underline;
+	color: #ECCA50;
+	margin-left: 1rem;
+}
+
+.submit-btn {
+	outline: none;
+	padding: 0.5rem 1.2rem;
+	font-weight: 400;
+	font-size: 1.1rem;
+	transition: all 0.2s linear;
+	border-radius: 5px;
+	border: 1px solid #ECCA50;
+	cursor: pointer;
+	background-color: #ECCA50;
+	color: rgb(255, 255, 255);
+	font-size: 0.9rem;
+}
+
+.submit-btn:hover {
+	background-color: transparent;
+	color: #ECCA50;
+}
+
+::placeholder {
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	opacity: 0.6;
+}
+
+footer {
+	position: fixed;
+	z-index: 99;
+	bottom: 3vh;
+	display: flex;
+	width: 100%;
+	place-content: center;
+	align-items: center;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2rem;
+	color: #fff;
+	font-weight: lighter;
+	opacity: 0.7;
+}
+
+footer p {
+	margin-left: 0.5rem;
+}
+
+footer i {
+	color: #ECCA50;
+}
